@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useAccount } from 'wagmi'
 import { useSignMessage } from 'wagmi'
 
-import { Account } from './components'
+import { Profile } from './components'
 
 export function App() {
   const { isConnected } = useAccount()
@@ -20,8 +20,8 @@ export function App() {
   return (
     <>
       <h1>wagmi + ConnectKit + Vite</h1>
-      <ConnectKitButton />
-      {isConnected && <Account />}
+      {/* <ConnectKitButton /> */}
+      <Profile />
     </>
   )
 }

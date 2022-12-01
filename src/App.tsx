@@ -4,7 +4,6 @@ import { useAccount } from 'wagmi'
 import { useSignMessage } from 'wagmi'
 
 import { Account } from './components'
-import { SignMessage } from './components/SignMessage'
 
 export function App() {
   const { isConnected } = useAccount()

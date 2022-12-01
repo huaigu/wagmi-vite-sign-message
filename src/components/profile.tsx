@@ -8,7 +8,7 @@ import {
    
   export function Profile() {
     const { address, connector, isConnected } = useAccount()
-    const { data: ensAvatar } = useEnsAvatar({ address })
+    // const { data: ensAvatar } = useEnsAvatar({ address })
     const { data: ensName } = useEnsName({ address })
     const { connect, connectors, error, isLoading, pendingConnector } =
       useConnect()
@@ -17,10 +17,9 @@ import {
     if (isConnected) {
       return (
         <div>
-          <img src={ensAvatar} alt="ENS Avatar" />
           <div>{ensName ? `${ensName} (${address})` : address}</div>
-          <div>Connected to {connector.name}</div>
-          <button onClick={disconnect}>Disconnect</button>
+          <div>Connected to {connector?.name}</div>
+          {/* <button onClick={disconnect}>Disconnect</button> */}
         </div>
       )
     }

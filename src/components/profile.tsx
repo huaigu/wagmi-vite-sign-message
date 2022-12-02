@@ -22,6 +22,8 @@ import {
           <div>{ensName ? `${ensName} (${address})` : address}</div>
           <div>Connected to {connector?.name}</div>
           <button onClick={disconnect}>Disconnect</button>
+          {/* <button onClick={disconnect}>swtich network</button> */}
+          
         </div>
       )
     }

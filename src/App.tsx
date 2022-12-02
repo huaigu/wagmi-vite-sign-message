@@ -16,8 +16,8 @@ export function App() {
     const f = async ()=>{
       // force to back to mobile wallet app
      
-     const data =  await signMessageAsync({ message: "hello" })
-     alert(data)
+    //  const data =  await signMessageAsync({ message: "hello" })
+    //  alert(data)
     }
     f()
   },[isConnected])
@@ -26,7 +26,10 @@ export function App() {
     <>
       <h1>wagmi + ConnectKit + Vite</h1>
       {/* <ConnectKitButton /> */}
-      <button onClick={()=>{connect({connector})}} >sign message</button>
+      <button onClick={async ()=>{
+        await signMessageAsync({ message: "hello" })
+        alert(data)
+      }} >sign message</button>
       <Profile />
     </>
   )

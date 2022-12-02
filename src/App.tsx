@@ -15,7 +15,7 @@ export function App() {
   useEffect(()=>{
     const f = async ()=>{
       // force to back to mobile wallet app
-     await connect({connector})
+     
      const data =  await signMessageAsync({ message: "hello" })
      alert(data)
     }
@@ -26,6 +26,7 @@ export function App() {
     <>
       <h1>wagmi + ConnectKit + Vite</h1>
       {/* <ConnectKitButton /> */}
+      <button onClick={()=>{connect({connector})}} >sign message</button>
       <Profile />
     </>
   )
